@@ -1,121 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="TUF-8" />
-    <meta name="author" content="Roger Wang" />
-    <meta
-      name="description"
-      content="The test website for brakes"
-    />
-    <title>Ludong Brakes</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to Ludong Autoparts</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="#about"
-              >About <abbr title="Ludong Autoparts">Ludong</abbr></a
-            >
-          </li>
-          <li>
-            <a href="#menu">Our Products</a>
-          </li>
-          <li>
-            <a href="hours.html">Work Hours</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-      <figure>
-        <img
-          src="img/brake01.jpg"
-          title="We love Ludong brakes!"
-          width="290"
-          height="174"
-        />
-        <figcaption>Ludong Dics & pads</figcaption>
-      </figure>
-    </header>
-    <hr />
-    <main>
-      <article id="about">
-        <h2>About <abbr title="Ludong brake Discs and Pads">Ludong</abbr></h2>
-        <p>
-          <abbr title="Ludong Autoparts">Ludong</abbr> was founded in
-          <time datetime="2000">2000</time>. We produce 
-          <strong>Ludong brake discs and pads</strong>
-          <img src="img/brake.png" alt="brake" width="24" height="24" />
-          <img src="img/brake.png" alt="brake" width="24" height="24" />
-          <img src="img/brake.png" alt="brake" width="24" height="24" />. We hope
-          <br />
-          our products address all your needs in car after-sales market.
-        </p>
-        <h3>Ludong Brake Discs & Pads</h3>
-        <aside>
-          <details>
-            <summary>When did Ludong Autoparts appear in China?</summary>
-            </p>
-          </details>
-        </aside>
-      </article>
-      <hr />
-      <article id="menu">
-        <table>
-          <caption>
-            Our Products
-          </caption>
-          <tr>
-            <th>Brake Discs & Pads</th>
-            <th scope="col"><abbr tabindex="Quantity">Qty</abbr></th>
-            <th scope="col">Price</th>
-          </tr>
-          <tbody>
-            <tr>
-              <td scope="row" rowspan="3">Discs</td>
-              <td>1</td>
-              <td>$19.90</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>$36.90</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>$51.90</td>
-            </tr>
-            <tr>
-              <td rowspan="3">Pads</td>
-              <td>1</td>
-              <td>$9.90</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>$17.90</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>$24.90</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="3">Disc &amp; Pads $27.90</td>
-            </tr>
-          </tfoot>
-        </table>
-      </article>
-    </main>
-    <br />
-    <footer>
-      <a href="#">Back to Top</a>
-      <hr />
-      <p>Copyright &copy; Ludong Autoparts</p>
-    </footer>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/earth.png" class="earth">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/camera.png">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/processor.png">
+                    <div>
+                        <h1>processor</h1>
+                        <p>Snapdragon Octa core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/display.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini drop Full screen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/battery.png">
+                    <div>
+                        <h1>battery Life</h1>
+                        <p>5000mAh, 720Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,15 +1,152 @@
-body{
-  background-color:skyblue;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-table,
-tr,
-th,
-td,
-caption {
-  background-color: white;
-  border: 1px solid #333;
-  font-family: "Courier New", "Courier New", Courier, monospace;
-  border-collapse: collapse;
-  padding: 0.5rem;
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #9c27b0, #8ecdff);
+}
+
+nav{
+    width: 80%;
+    position: sticky;
+    margin: 20px auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    flex-basis: 20%;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.information{
+    width: 1000px;
+    height:1000px;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+}
+
+#circle{
+    width: 800px;
+    height:800px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+.feature img{
+    width: 60px;
+}
+
+.feature{
+    position: absolute;
+    display: flex;
+    color: #fff;
+}
+
+.feature div{
+    margin-left: 30px;
+}
+
+.feature div p{
+    margin-top: 8px;
+}
+
+.one{
+    top: 350px;
+    right: -10px;
+}
+
+.two{
+    top: 80px;
+    left: 250px;
+    transform: rotate(-90deg);
+}
+
+.three{
+    bottom: 370px;
+    left: 0px;
+    transform: rotate(-180deg);
+}
+
+.four{
+    bottom: 100px;
+    right: 250px;
+    transform: rotate(-270deg);
+}
+
+.earth{
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.controls{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.controls h3{
+    margin: 15px 0;
+    color: #fff;
+}
+
+#upBtn{
+    width: 15px;
+    cursor: pointer;
+}
+
+#downBtn{
+    width: 15px;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid #fff;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #fff;
+    border-left: 500px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
