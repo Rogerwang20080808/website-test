@@ -1,70 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=0.3, minimum-scale=0.3, maximum-scale=1.0, user-scalable=yes" />
-    <title>Quantet</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="main">
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png">
-            </div>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Phone</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Cart</a></li>
-                </ul>
-            </div>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Top 10 Richest People</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/ed0c77f75c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-        <div class="information">
-            <div class="overlay"></div>
-            <img src="images/earth.png" class="earth">
-            <div id="circle">
-                <div class="feature one">
-                    <img src="images/camera.png">
-                    <div>
-                        <h1>Camera</h1>
-                        <p>12MP, Wide Angle Lens</p>
-                    </div>
-                </div>
-                <div class="feature two">
-                    <img src="images/processor.png">
-                    <div>
-                        <h1>processor</h1>
-                        <p>Snapdragon Octa core 11nm</p>
-                    </div>
-                </div>
-                <div class="feature three">
-                    <img src="images/display.png">
-                    <div>
-                        <h1>Display</h1>
-                        <p>6.5" Mini drop Full screen</p>
-                    </div>
-                </div>
-                <div class="feature four">
-                    <img src="images/battery.png">
-                    <div>
-                        <h1>battery Life</h1>
-                        <p>5000mAh, 720Hrs Standby</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="controls">
-            <img src="images/arrow.png" id="upBtn">
-            <h3>Features</h3>
-            <img src="images/arrow.png" id="downBtn">
-        </div>
-
-    </div>
+  <body>
+    <h1>10 Richest People</h1>
+    <p>Drag and drop the item into their corresponding spots</p>
+    <ul class="draggable-list" id="draggable-list"></ul>
+    <button class="check-btn" id="check">
+      Check Order
+      <i class="fas fa-papaer-plane"></i>
+    </button>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

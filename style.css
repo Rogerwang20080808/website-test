@@ -1,152 +1,92 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --border-color: #e3e5e5;
+  --background-color: #c3c7ca;
+  --text-color: #34444f;
 }
 
-.main{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to right, #9c27b0, #8ecdff);
+* {
+  box-sizing: border-box;
 }
 
-nav{
-    width: 80%;
-    position: sticky;
-    margin: 20px auto;
-    z-index: 1;
-    display: flex;
-    align-items: center;
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
-.logo{
-    flex-basis: 20%;
+.draggable-list {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+  list-style-type: none;
 }
 
-.logo img{
-    width: 150px;
+.draggable-list li {
+  background-color: #fff;
+  display: flex;
+  flex: 1;
 }
 
-.nav-links{
-    flex: 1;
-    text-align: right;
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
 }
 
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
+.draggable-list .number {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  height: 60px;
+  width: 60px;
 }
 
-.nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
+.draggable-list li.right .person-name {
+  color: #3ae374;
 }
 
-.information{
-    width: 1000px;
-    height:1000px;
-    position: absolute;
-    top: 50%;
-    left: -10%;
-    transform: translateY(-50%);
+.draggable-list li.wrong .person-name {
+  color: #ff3838;
 }
 
-#circle{
-    width: 800px;
-    height:800px;
-    position: absolute;
-    top: 100px;
-    left: 40px;
-    border-radius: 50%;
-    transform: rotate(0deg);
-    transition: 1s;
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
 }
 
-.feature img{
-    width: 60px;
+.draggable-list .person-name {
+  margin: 0 20px 0 0;
 }
 
-.feature{
-    position: absolute;
-    display: flex;
-    color: #fff;
+.draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex: 1;
 }
 
-.feature div{
-    margin-left: 30px;
+.check-btn {
+  background-color: var(--background-color);
+  border: 1px solid;
+  border-radius: 15px;
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.feature div p{
-    margin-top: 8px;
+.check-btn:active {
+  transform: scale(0.98);
 }
 
-.one{
-    top: 350px;
-    right: -10px;
-}
-
-.two{
-    top: 80px;
-    left: 250px;
-    transform: rotate(-90deg);
-}
-
-.three{
-    bottom: 370px;
-    left: 0px;
-    transform: rotate(-180deg);
-}
-
-.four{
-    bottom: 100px;
-    right: 250px;
-    transform: rotate(-270deg);
-}
-
-.earth{
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.controls{
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-}
-
-.controls h3{
-    margin: 15px 0;
-    color: #fff;
-}
-
-#upBtn{
-    width: 15px;
-    cursor: pointer;
-}
-
-#downBtn{
-    width: 15px;
-    cursor: pointer;
-    transform: rotate(180deg);
-}
-
-.overlay{
-    width: 0;
-    height: 0;
-    border-top: 500px solid #fff;
-    border-right: 500px solid transparent;
-    border-bottom: 500px solid #fff;
-    border-left: 500px solid #fff;
-    position: absolute;
-    left: 0;
-    top: 0;
+.check-btn:focus {
+  outline: none;
 }
