@@ -4,124 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quantet</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
+    <div class="main">
         <nav>
-            <h1><img style="vertical-align:middle" src="/images/earth_small.png"> Quantet </h1>
-            <ul class="tabs">
-                <li class="tab is-active" >
-                    <a data-switcher data-tab="1" >Home</a>
-                </li>
-                <li class="tab">
-                    <a data-switcher data-tab="2" >English Pronunciation</a>
-                </li>
-                <li class="tab">
-                    <a data-switcher data-tab="3" >Chinese Game</a>
-                </li>
-                <li class="tab">
-                    <a data-switcher data-tab="4" >Contact</a>
-                </li>
-            </ul>
+            <h1> Quantet </h1>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/ipa.html">Home</a></li>
+                    <li><a href="#">English Pronunciation</a></li>
+                    <li><a href="#">Chinese Game</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </nav>
-    </header>
-    <main>
-        <nav>
-            <ul class="sub-tabs">
-                <li class="sub-tab is-active" >
-                    <a sub-switcher sub-tab="1" >IAP</a>
-                </li>
-                <li class="sub-tab">
-                    <a sub-switcher sub-tab="2" >Practices</a>
-                </li>
-                <li class="sub-tab">
-                    <a sub-switcher sub-tab="3" >Quizzes</a>
-                </li>
-            </ul>
-        </nav>
-        <section class="sounds">
-            <div class="short-vowels" data-sound="1">
-                <h3>Short vowels 短元音:</h3><br>
-                <ul class="short-vowel">
-                    <li id="short-vowel-1">i</li>
-                    <li id="short-vowel-2">u</li>
-                    <li id="short-vowel-3">ʌ</li>
-                    <li id="short-vowel-4">ɒ</li>
-                    <li id="short-vowel-5">ə</li>
-                    <li id="short-vowel-6">e</li>
-                    <li id="short-vowel-7">æ</li>
-                </ul>
-            </div>
-            <div class="long-vowels" data-sound="2">
-                <h3>Long vowels 长元音:</h3><br>
-                <ul class="long-vowel">
-                    <li id="long-vowel-1">i:</li>
-                    <li id="long-vowel-2">u:</li>
-                    <li id="long-vowel-3">a:</li>
-                    <li id="long-vowel-4">ɒ:</li>
-                    <li id="long-vowel-5">ɜ:</li>
-                </ul>
 
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/earth.png" class="earth">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/pronunciation.png">
+                    <div>
+                        <h2>English Pronunciation</h2>
+                        <h3>音标对比训练，突破英语发音！</h3>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/about.png">
+                    <div>
+                        <h2>About Us</h2>
+                        <h3>Play & Study Here</h3>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/contact.png">
+                    <div>
+                        <h2>Contact Us</h2>
+                        <h3>Your suggetion is important for us</h3>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/game.png">
+                    <div>
+                        <h2>Chinese Practice</h2>
+                        <h3>Chinese Text sorting</h3>
+                    </div>
+                </div>
             </div>
-            <div class="double-vowels" data-sound="3">
-                <h3>Double vowels 双元音:</h3><br>
-                <ul class="double-vowel">
-                    <li id="double-vowel-1">iə</li>
-                    <li id="double-vowel-2">uə</li>
-                    <li id="double-vowel-3">ai</li>
-                    <li id="double-vowel-4">ɒi</li>
-                    <li id="double-vowel-5">əu</li>
-                    <li id="double-vowel-6">eə</li>
-                    <li id="double-vowel-7">au</li>
-                    <li id="double-vowel-8">ei</li>
-                </ul>
-            </div>
-            <div class="voiceless-consonants" data-sound="4">
-                <h3>Voiceless consonants 清辅音:</h3><br>
-                <ul class="voiceless-consonant">
-                    <li id="voiceless-consonant-1">p</li>
-                    <li id="voiceless-consonant-2">t</li>
-                    <li id="voiceless-consonant-3">tʃ</li>
-                    <li id="voiceless-consonant-4">k</li>
-                    <li id="voiceless-consonant-5">f</li>
-                    <li id="voiceless-consonant-6">θ</li>
-                    <li id="voiceless-consonant-7">s</li>
-                    <li id="voiceless-consonant-8">ʃ</li>
-                </ul>
+        </div>
+        <div class="controls">
+            <p id="upBtn"> &#10148 </p>
+            <h3>Features</h3>
+            <p id="downBtn"> &#10148 </p>
+        </div>
 
-            </div>
-            <div class="voiced-consonants" data-sound="4">
-                <h3>Voiced consonants 浊辅音:</h3><br>
-                <ul class="voiced-consonant">
-                    <li id="voiced-consonant-1">b</li>
-                    <li id="voiced-consonant-2">d</li>
-                    <li id="voiced-consonant-3">dʒ</li>
-                    <li id="voiced-consonant-4">g</li>
-                    <li id="voiced-consonant-5">v</li>
-                    <li id="voiced-consonant-6">ð</li>
-                    <li id="voiced-consonant-7">z</li>
-                    <li id="voiced-consonant-8">ʒ</li>                 
-                </ul>
-
-            </div>
-            <div class="other-consonants" data-sound="4">
-                <h3>Other consonants 其它辅音:</h3><br>
-                <ul class="other-consonant">
-                    <li id="other-consonant-1">m</li>
-                    <li id="other-consonant-2">n</li>
-                    <li id="other-consonant-3">ŋ</li>
-                    <li id="other-consonant-4">h</li>
-                    <li id="other-consonant-5">l</li>
-                    <li id="other-consonant-6">r</li>
-                    <li id="other-consonant-7">w</li>
-                    <li id="other-consonant-8">j</li>                    
-                </ul>
-            </div>
-        </section>
-    </main>
-
+    </div>
 
     <script src="script.js"></script>
 </body>
