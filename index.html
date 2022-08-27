@@ -2,67 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantet</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <div class="main">
-        <nav>
-            <h1> Quantet </h1>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="/ipa.html">Home</a></li>
-                    <li><a href="#">English Pronunciation</a></li>
-                    <li><a href="#">Chinese Game</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="information">
-            <div class="overlay"></div>
-            <img src="images/earth.png" class="earth">
-            <div id="circle">
-                <div class="feature one">
-                    <img src="images/pronunciation.png">
-                    <div>
-                        <h2>English Pronunciation</h2>
-                        <h3>音标对比训练，突破英语发音！</h3>
-                    </div>
-                </div>
-                <div class="feature two">
-                    <img src="images/about.png">
-                    <div>
-                        <h2>About Us</h2>
-                        <h3>Play & Study Here</h3>
-                    </div>
-                </div>
-                <div class="feature three">
-                    <img src="images/contact.png">
-                    <div>
-                        <h2>Contact Us</h2>
-                        <h3>Your suggetion is important for us</h3>
-                    </div>
-                </div>
-                <div class="feature four">
-                    <img src="images/game.png">
-                    <div>
-                        <h2>Chinese Practice</h2>
-                        <h3>Chinese Text sorting</h3>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <h1>VOICE RECORDING APP</h1>
+        <span>Recorder</span>
+        <audio id="recorder" muted hidden></audio>
+        <div>
+            <button id="start">Record</button>
+            <button id="stop">Stop Recording</button>
         </div>
-        <div class="controls">
-            <p id="upBtn"> &#10148 </p>
-            <h3>Features</h3>
-            <p id="downBtn"> &#10148 </p>
-        </div>
-
+        <span>Saved Recording</span>
+        <audio id="player" controls></audio>
     </div>
 
+
     <script src="script.js"></script>
+    
 </body>
 </html>
