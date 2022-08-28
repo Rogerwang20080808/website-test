@@ -1,44 +1,25 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Web dictaphone</title>
-    <link href="styles/app.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 
-    <div class="wrapper">
-
-      <header>
-        <h1>Web dictaphone</h1>
-      </header>
-
-      <section class="main-controls">
-        <canvas class="visualizer" height="60px"></canvas>
-        <div id="buttons">
-          <button class="record">Record</button>
-          <button class="stop">Stop</button>
+</head>
+<body>
+    <div class="container">
+        <h1>VOICE RECORDING APP</h1>
+        <span>Recorder</span>
+        <audio id="recorder" muted hidden></audio>
+        <div>
+            <button id="start">Record</button>
+            <button id="stop">Stop Recording</button>
         </div>
-      </section>
-
-      <section class="sound-clips">
-
-
-      </section>
-
+        <span>Saved Recording</span>
+        <audio id="player" controls></audio>
     </div>
 
-    <label for="toggle">❔</label>
-    <input type="checkbox" id="toggle">
-    <aside>
-      <h2>Information</h2>
 
-      <p>Web dictaphone is built using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia">getUserMedia</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>, which provides an easier way to capture Media streams.</p>
-
-      <p>Icon courtesy of <a href="http://findicons.com/search/microphone">Find Icons</a>. Thanks to <a href="http://soledadpenades.com/">Sole</a> for the Oscilloscope code!</p>
-    </aside>
-    <script src="scripts/app.js"></script>
-
-  </body>
+    <script src="script.js"></script>
+    
+</body>
 </html>
