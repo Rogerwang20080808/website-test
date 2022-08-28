@@ -77,13 +77,4 @@ class VoiceRecorder{
 
 }
 
-const button=document.querySelector('#start');
-
-var myAudio = new Audio('song/myAudio.mp3');
-
-button.addEventListener("click", function() {
-    myAudio.play();
-    myAudio.pause();
-});
-
 window.VoiceRecorder = new VoiceRecorder();
