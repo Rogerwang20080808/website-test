@@ -1,80 +1,122 @@
-class VoiceRecorder{
-    constructor(){
-        if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
-            console.log("Get user media suported");
-        }else{
-            console.log("Get user media Not suported");
-        }
+const touchable_list = document.getElementById("touchable-list");
+const check = document.getElementById("check");
 
-        this.mediaRecorder;
-        this.stream;
-        this.chunks = [];
-        this.isRecording = false;
+const richestPeople = [
+  "Jeff Bezos",
+  "Bill Gates",
+  "Warren Buffett",
+  "Bernard Arnault",
+  "Carlos Slim Helu",
+  "Amancio Ortega",
+  "Larry Ellison",
+  "Mark Zuckerbert",
+  "Michael Bloomberg",
+  "Larry Page",
+];
 
-        this.recorderRef = document.querySelector('#recorder');
-        this.playerRef = document.querySelector('#player');
-        this.startRef = document.querySelector('#start');
-        this.stopRef = document.querySelector('#stop');
+//Store listItems
+const listItems = [];
 
-        this.startRef.onclick =this.startRecording.bind(this);
-        this.stopRef.onclick =this.stopRecording.bind(this);
+let touchStartIndex;
 
-        this.constraints = {
-            audio:true,
-            video:false
-        }
-    }
+createList();
 
-    //handle sucess
+//Insert list items into DOM
+function createList() {
+  [...richestPeople]
+    .map((a) => ({ value: a, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value)
+    .forEach((person, index) => {
+      // console.log(person);
+      const listItem = document.createElement("li");
 
-    handleSucess(stream){
-        this.stream = stream;
-        this.stream.oninactive = () => {
-            console.log("stream ended");
-        }
+      // listItem.classList.add('over');
+      // listItem.classList.add('right');
 
-        this.recorderRef.srcObject = this.stream;
-        this.mediaRecorder = new MediaRecorder(this.stream)
-        this.mediaRecorder.ondataavailable = this.onMediaRecorderDataAvailable.bind(this);
-        this.mediaRecorder.onstop = this.onMediaRecorderStop.bind(this);
-        this.recorderRef.play();
-        this.mediaRecorder.start();
-    }
-    onMediaRecorderDataAvailable(e){this.chunks.push(e.data)};
+      listItem.setAttribute("data-index", index);
+      listItem.innerHTML = `
+    <span class="number">${index + 1}</span>
+    <div class="touchable" touchable="true"> 
+       <p class="person-name">${person}</p>
+       <i class="fas fa-grip-lines"></i>
+    </div>
+    `;
 
-    onMediaRecorderStop(e){
-        const blob = new Blob(this.chunks, {'type': 'audio/ogg; codesc=opus'});
-        const audioURL = window.URL.createObjectURL(blob);
-        this.playerRef.src = audioURL;
-        this.chunks = [];
-        this.stream.getAudioTracks().forEach(track => track.stop());
-        this.stream = null;
-    }
+      listItems.push(listItem);
 
-//  startRecording
-
-    startRecording(){
-        if(this.isRecording) return
-        this.isRecording = true
-        this.startRef.innerHTML ="Recording...";
-        this.playerRef.src = '';
-        navigator.mediaDevices.getUserMedia(this.constraints)
-            .then(this.handleSucess.bind(this))
-            .catch(this.handleSucess.bind(this))
-
-    }
-
-//  stopRecording
-
-    stopRecording(){
-        if(!this.isRecording) return
-        this.isRecording = false
-        this.startRef.innerHTML = "Record";
-        this.recorderRef.pause();
-        this.mediaRecorder.stop();
-
-    }
-
+      touchable_list.appendChild(listItem);
+    });
+  addEventListeners();
 }
 
-window.VoiceRecorder = new VoiceRecorder();
+function touchStart() {
+  // console.log("Event: ", "touchstart");
+  touchStartIndex = +this.closest("li").getAttribute("data-index");
+  // console.log(touchStartIndex);
+}
+
+function touchStart() {
+  // console.log("Event: ", "touchstart");
+  this.classList.add("over");
+}
+
+function touchMove(e) {
+  // console.log("Event: ", "touchMove");
+  e.preventDefault();
+}
+
+function touchLeave() {
+  // console.log("Event: ", "touchleave");
+  this.classList.remove("over");
+}
+
+function touchCancel() {
+  // console.log("Event: ", "touchtouchcancel");
+  const touchEndIndex = +this.getAttribute("data-index");
+  swapItems(touchStartIndex, touchEndIndex);
+
+  this.classList.remove("over");
+}
+
+//Swap list items that are touched and touchcancelped
+function swapItems(fromIndex, toIndex) {
+  // console.log(123);
+  const itemOne = listItems[fromIndex].querySelector(".touchable");
+  const itemTwo = listItems[toIndex].querySelector(".touchable");
+  // console.log(itemOne, itemTwo);
+  listItems[fromIndex].appendChild(itemTwo);
+  listItems[toIndex].appendChild(itemOne);
+}
+
+//check the order of list items
+function checkOrder() {
+  listItems.forEach((listItem, index) => {
+    const personName = listItem.querySelector(".touchable").innerText.trim();
+
+    if (personName != richestPeople[index]) {
+      listItem.classList.add("wrong");
+    } else {
+      listItem.classList.remove("wrong");
+      listItem.classList.add("right");
+    }
+  });
+}
+
+function addEventListeners() {
+  const touchables = document.querySelectorAll(".touchable");
+  const touchListItem = document.querySelectorAll(".touchable-list li");
+
+  touchables.forEach((touchable) => {
+    touchable.addEventListener("touchstart", touchStart);
+  });
+
+  touchListItem.forEach((item) => {
+    item.addEventListener("touchmove", touchMove);
+    item.addEventListener("touchcancel", touchCancel);
+    item.addEventListener("touchenter", touchStart);
+    item.addEventListener("touchleave", touchLeave);
+  });
+}
+
+check.addEventListener("click", checkOrder);
