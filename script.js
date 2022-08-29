@@ -66,20 +66,20 @@ function touchMove(e) {
   e.preventDefault();
 }
 
-function touchLeave() {
-  // console.log("Event: ", "touchleave");
+function touchCancel() {
+  // console.log("Event: ", "touchMove");
   this.classList.remove("over");
 }
 
-function touchCancel() {
-  // console.log("Event: ", "touchtouchcancel");
+function touchEnd() {
+  // console.log("Event: ", "touchtouchEnd");
   const touchEndIndex = +this.getAttribute("data-index");
   swapItems(touchStartIndex, touchEndIndex);
 
   this.classList.remove("over");
 }
 
-//Swap list items that are touched and touchcancelped
+//Swap list items that are touched and touchEndped
 function swapItems(fromIndex, toIndex) {
   // console.log(123);
   const itemOne = listItems[fromIndex].querySelector(".touchable");
@@ -113,9 +113,9 @@ function addEventListeners() {
 
   touchListItem.forEach((item) => {
     item.addEventListener("touchmove", touchMove);
-    item.addEventListener("touchcancel", touchCancel);
+    item.addEventListener("touchEnd", touchEnd);
     item.addEventListener("touchenter", touchStart);
-    item.addEventListener("touchleave", touchLeave);
+    item.addEventListener("touchcancel", touchCancel);
   });
 }
 
