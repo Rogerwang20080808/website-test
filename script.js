@@ -1,122 +1,27 @@
-const touchable_list = document.getElementById("touchable-list");
-const check = document.getElementById("check");
-
-const richestPeople = [
-  "Jeff Bezos",
-  "Bill Gates",
-  "Warren Buffett",
-  "Bernard Arnault",
-  "Carlos Slim Helu",
-  "Amancio Ortega",
-  "Larry Ellison",
-  "Mark Zuckerbert",
-  "Michael Bloomberg",
-  "Larry Page",
-];
-
-//Store listItems
-const listItems = [];
-
-let touchStartIndex;
-
-createList();
-
-//Insert list items into DOM
-function createList() {
-  [...richestPeople]
-    .map((a) => ({ value: a, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map((a) => a.value)
-    .forEach((person, index) => {
-      // console.log(person);
-      const listItem = document.createElement("li");
-
-      // listItem.classList.add('over');
-      // listItem.classList.add('right');
-
-      listItem.setAttribute("data-index", index);
-      listItem.innerHTML = `
-    <span class="number">${index + 1}</span>
-    <div class="touchable" touchable="true"> 
-       <p class="person-name">${person}</p>
-       <i class="fas fa-grip-lines"></i>
-    </div>
-    `;
-
-      listItems.push(listItem);
-
-      touchable_list.appendChild(listItem);
-    });
-  addEventListeners();
+window.onload = function () {
+    //select the thing we wanna drag
+    var mustachio = document.getElementById('gif');
+    //listen to the touchmove event, every time it fires, grab the location of the touch
+    //then assign it to mustachio
+    mustachio.addEventListener('touchmove', function (ev) {
+        //grab the location of the touch
+        var touchLocation = ev.targetTouches[0];
+        //assign mustachio new coordinates based on the touch
+        mustachio.style.left = touchLocation.pageX + 'px';
+        mustachio.style.top = touchLocation.pageY + 'px';
+    })
+    mustachio.addEventListener('touchend', function (ev) {
+        //current mustachio position when dropped
+        var x = parseInt(mustachio.style.left);
+        var y = parseInt(mustachio.style.top);
+        //check to see if that position meets our constraints
+        if (x < 388 || x > 646) {
+            mustachio.style.left = '450px';
+            mustachio.style.top = '175px';
+        }
+        if (y < 100 || y > 356) {
+            mustachio.style.left = '450px';
+            mustachio.style.top = '175px';
+        }
+    })
 }
-
-function touchStart() {
-  // console.log("Event: ", "touchstart");
-  touchStartIndex = +this.closest("li").getAttribute("data-index");
-  // console.log(touchStartIndex);
-}
-
-function touchStart() {
-  // console.log("Event: ", "touchstart");
-  this.classList.add("over");
-}
-
-function touchMove(e) {
-  // console.log("Event: ", "touchMove");
-  e.preventDefault();
-}
-
-function touchCancel() {
-  // console.log("Event: ", "touchMove");
-  this.classList.remove("over");
-}
-
-function touchEnd() {
-  // console.log("Event: ", "touchtouchEnd");
-  const touchEndIndex = +this.getAttribute("data-index");
-  swapItems(touchStartIndex, touchEndIndex);
-
-  this.classList.remove("over");
-}
-
-//Swap list items that are touched and touchEndped
-function swapItems(fromIndex, toIndex) {
-  // console.log(123);
-  const itemOne = listItems[fromIndex].querySelector(".touchable");
-  const itemTwo = listItems[toIndex].querySelector(".touchable");
-  // console.log(itemOne, itemTwo);
-  listItems[fromIndex].appendChild(itemTwo);
-  listItems[toIndex].appendChild(itemOne);
-}
-
-//check the order of list items
-function checkOrder() {
-  listItems.forEach((listItem, index) => {
-    const personName = listItem.querySelector(".touchable").innerText.trim();
-
-    if (personName != richestPeople[index]) {
-      listItem.classList.add("wrong");
-    } else {
-      listItem.classList.remove("wrong");
-      listItem.classList.add("right");
-    }
-  });
-}
-
-function addEventListeners() {
-  const touchables = document.querySelectorAll(".touchable");
-  const touchListItem = document.querySelectorAll(".touchable-list li");
-
-  touchables.forEach((touchable) => {
-    touchable.addEventListener("touchstart", touchStart);
-  });
-
-  touchListItem.forEach((item) => {
-    item.addEventListener("touchmove", touchMove);
-    item.addEventListener("touchEnd", touchEnd);
-    item.addEventListener("touchenter", touchStart);
-    item.addEventListener("touchcancel", touchCancel);
-  });
-}
-
-check.addEventListener("click", checkOrder);

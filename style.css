@@ -1,92 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
-:root {
-  --border-color: #e3e5e5;
-  --background-color: #c3c7ca;
-  --text-color: #34444f;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100vh;
-  margin: 0;
-  font-family: "Lato", sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
 }
 
-.touchable-list {
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  padding: 0;
-  list-style-type: none;
+#dropbox {
+    height: 250px;
+    width: 250px;
+    border: 5px solid black;
 }
 
-.touchable-list li {
-  background-color: #fff;
-  display: flex;
-  flex: 1;
-}
-
-.touchable-list li:not(:last-of-type) {
-  border-bottom: 1px solid var(--border-color);
-}
-
-.touchable-list .number {
-  background-color: var(--background-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
-  height: 60px;
-  width: 60px;
-}
-
-.touchable-list li.right .person-name {
-  color: #3ae374;
-}
-
-.touchable-list li.wrong .person-name {
-  color: #ff3838;
-}
-
-.touchable-list li.over .touchable {
-  background-color: #eaeaea;
-}
-
-.touchable-list .person-name {
-  margin: 0 20px 0 0;
-}
-
-.touchable {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  flex: 1;
-}
-
-.check-btn {
-  background-color: var(--background-color);
-  border: 1px solid;
-  border-radius: 15px;
-  color: var(--text-color);
-  font-size: 16px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.check-btn:active {
-  transform: scale(0.98);
-}
-
-.check-btn:focus {
-  outline: none;
+img {
+    position: absolute;
+    height: 150px;
+    width: 150px;
 }
