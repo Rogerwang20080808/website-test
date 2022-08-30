@@ -1,17 +1,27 @@
-
-<!-- Make sure to load this example with a mobile dev tool. Dragging will not work with mouse event-->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mobile Drag and Drop Demo</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body>
-    <div id="dropbox"></div>
-    <img id="gif" src="/giphy.gif">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Top 10 Richest People</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/ed0c77f75c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1>10 Richest People</h1>
+    <p>Drag and drop the item into their corresponding spots</p>
+    <ul class="draggable-list" id="draggable-list"></ul>
+    <button class="check-btn" id="check">
+      Check Order
+      <i class="fas fa-papaer-plane"></i>
+    </button>
 
     <script src="script.js"></script>
-</body>
+    <script src="scripts/DragDropTouch.js"></script>
+  </body>
 </html>
