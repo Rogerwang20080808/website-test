@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/practice_blue.png" type="image/x-icon">
+    <title>对比练习法</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/custom.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/sort.css">
+  </head>
+  
+  <body>
+    <header>
+      <!--start of nav-->
+      <nav class="mainnav shadow-lg navbar-expand-lg navbar navbar-dark bg-dark fixed-top" style="min-width: 350px">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            <img src="images/practice.png" style="width: 50px;">
+            <span class="text-white h5" id="title">对比练习法</span>
+            <div class="text-white h6">Unleash your potential</div>
+          </div>
+
+          <!-- <a href="mailto:inquiry@ldautoparts.com.cn" target="_blank" class="btn btn-primary" >
+            <span class="email">Contact us:</span> &nbsp;&nbsp;
+            <img src="images/email.png" style="width: 30px;">
+          </a> -->
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-1g-0">
+              <li class="nav-item">
+                <a class="nav-link home" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link study" href="study.html">Study</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link game active" href="sort.html">Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link sources" href="sources.html">Sources</a>
+              </li>
+
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle language" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  English
+                </a>
+                <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item text-white" href="#" value="1" language="simp-c">简体中文</a></li>
+                  <li><a class="dropdown-item text-white" href="#" value="2" language="trad-c">繁體中文</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-white active" value="3" href="#" language="english">English</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--end of nav-->
+    </header>
+
+    <main>
+      <div class="textSort text-primary pt-5 mt-5">
+        <div class="nav-spacer"></div><br><br>
+        <p class="h1 sortingTitle1 d-flex justify-content-center"> Chinese Text Sorting</p>
+        <h5 class="sortingTitle2 d-flex justify-content-center">Drag and drop Chinese characters to the corresponding position</h5><br>
+        <ul class="draggable-list" id="draggable-list"></ul>
+        <br>
+
+        <div class="text-center">
+          <button type="button" class="btn btn-primary" id="prevSortBtn">&#9668</button>
+          <button type="button" class="btn btn-primary" id="checkBtn">Check</button>  
+          <button type="button" class="btn btn-primary" id="nextSortBtn">&#9658</button>     
+        </div><br>
+
+        <div class="d-flex justify-content-center">
+          <div class="input-group" style="width: 440px;">
+            <div class="input-group-prepend">
+              <label class="input-group-text">Number</label>
+            </div>
+            <input class="form-control" placeholder="1" id="quizNo" aria-label="Disabled input example" disabled>
+
+            <div class="input-group-prepend">
+              <button type="button" class="btn btn-primary" id="jumpBtn">Jump to :</button>
+            </div>
+            <input type="number" min="1" max="100" class="form-control"placeholder="(1~100)" aria-describedby="basic-addon1" id="jumpNo">
+          </div>
+        </div>
+      </div>
+
+      <br><br><br>
+    </main>
+
+    <footer>
+      <div class="p-3 mb-2 bg-dark text-white">
+        <div class="row">
+            <div class="col-md-6">
+              <a href="https://www.smashwords.com/books/view/1167357"><img src="images/cover.png"  style="width: 50%;"></a>
+            </div>
+            <div class="col-md-3 text-center">
+              <br><br><br><br>
+              <a class="h3" href="https://www.smashwords.com/books/view/1167357" >突破英语发音</a>
+              <br><br>
+              <h5>(对比练习法)</h5><br>
+            </div>
+        </div>      
+
+        <div class="m-5">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一些中国学生到讲英语的国家留学，虽然通过了入学英语考试，但到了这些国家，发现自己讲的英语当地人听不懂，当地人讲的英语自己也听不懂，还可能因此引发误会。甚至一些人学习英语一、二十年，英语发音仍然不正确，音标发音混淆……。除了英语口音不同，英语口语、书写用语不同，英语习惯用语不同等原因，一个基本问题就是英语音标、单词发音不正确。</p><br>
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语学习的难点是发音，英语发音关键是控制口型、发音长度。大脑需反复练习、控制一系列复杂的口腔等部位的肌肉动作，进行发音。如果基本发音错误，学的英语词汇越多，时间越长，将来逐个纠正的难度就越大。</p><br>
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文通过分析汉语、英语的不同特点，针对中国学生在英语发音中容易犯的错误，找出一种有针对性、行之有效的英语发音练习方法，突破英语发音。</p><br>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="mailto:inquiry@ldautoparts.com.cn" target="_blank" class="btn btn-primary" >
+          <span>您的意见和建议非常宝贵，欢迎联系。</span>
+          <span class="email">Contact us:</span> &nbsp;&nbsp;
+          <img src="images/email.png" style="width: 30px;">
+        </a> 
+
+        <br><br><br>
+        <div class="h6 text-primary text-center">
+          【备案/许可证: 鲁ICP备2022031471号】
+        </div>
+      </div>
+
+    </footer>
+   </body>
+
+   <script>
+    msieversion();
+    function msieversion() {
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf("MSIE ");
+
+      if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+      {
+        alert("提示: 你正在使用IE浏览器, 因Bootstrap V5.0不再支持该版本浏览器, 可能导致浏览异常。 请使用Edge、Chrome(谷歌)、Firefox(火狐)、QQ、搜狐、360等浏览器浏览我们网站。");
+      }
+      // else  // If another browser, return 0
+      // {
+      //   alert('otherbrowser');
+      // }
+      return false;
+    }
+  </script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/sort.js"></script>
+  <script type="text/javascript" src="js/DragDropTouch.js"></script>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/practice_blue.png" type="image/x-icon">
+    <title>对比练习法</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/study.css">
+    <link rel="shortcut icon" href="#">
+  </head>
+  
+  <body>
+    <header>
+      <nav class="mainnav shadow-lg navbar-expand-lg navbar navbar-dark bg-dark fixed-top" style="min-width: 350px">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            <img src="images/practice.png" style="width: 45px;">
+            <span class="text-white h5" id="title">对比练习法</span>
+            <div class="text-white h6">Unleash your potential</div>
+          </div>
+
+          <!-- <a href="mailto:inquiry@ldautoparts.com.cn" target="_blank" class="btn btn-primary" >
+            <span class="email">Contact us:</span> &nbsp;&nbsp;
+            <img src="images/email.png" style="width: 30px;">
+          </a> -->
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-1g-0">
+              <li class="nav-item">
+                <a class="nav-link home" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link study active" href="study.html">Study</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link game" href="sort.html">Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link sources" href="sources.html">Sources</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle language" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  English
+                </a>
+                <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item text-white" href="#" language="simp-c">简体中文</a></li>
+                  <li><a class="dropdown-item text-white" href="#" language="trad-c">繁體中文</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-white active" href="#" language="english">English</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!--start of ipa tabs-->
+      <div class="study-area text-white pt-5 mt-2">
+        <br><div class="nav-spacer"></div>
+        <ul class="study-nav nav m-3 nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="text-white h5 nav-link active" id="pills-vowels-tab" data-bs-toggle="pill" data-bs-target="#pills-vowels" type="button" role="tab" aria-controls="pills-vowels" aria-selected="true">Vowels</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="text-white h5 nav-link" id="pills-consonants-tab" data-bs-toggle="pill" data-bs-target="#pills-consonants" type="button" role="tab" aria-controls="pills-consonants" aria-selected="false">Consonants</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="text-white h5 nav-link" id="pills-practices-tab" data-bs-toggle="pill" data-bs-target="#pills-practices" type="button" role="tab" aria-controls="pills-practices" aria-selected="false">Practices</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="text-white h5 nav-link" id="pills-quizzes-tab" data-bs-toggle="pill" data-bs-target="#pills-quizzes" type="button" role="tab" aria-controls="pills-quizzes" aria-selected="false">Quizzes</button>
+          </li>
+        </ul>
+
+        <!--ipa tab items-->
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-vowels" role="tabpanel" aria-labelledby="pills-vowels-tab" tabindex="0">
+            <div class="ipa m-1 col-md-8 ms-4 row">
+              <div class="short-v col h5">
+                <small>Short vowels: </small> <br>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(0)">/ɪ/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(1)">/u/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(2)">/ʌ/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(3)">/ɒ/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(4)">/ə/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(5)">/e/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(6)">/æ/</li>
+                </ul>                     
+              </div>
+            </div>
+            <div class="ipa m-1 col-md-8 ms-4 row">
+              <div class="long-v col flex h5">
+                <small>Long vowels: </small> <br>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(7)">/i:/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(8)">/u:/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(9)">/ɑ:/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(10)">/ɒ:/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(11)">/ɜ:/</li>
+                </ul>    
+              </div>
+            </div>
+            <div class="ipa m-1 col-md-8 ms-4 row">
+              <div class="double-v col flex h5">
+                <small>Double vowels: </small> <br>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(12)">/iə/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(13)">/uə/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(14)">/ai/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(15)">/ɒi/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(16)">/əu/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(17)">/eə/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(18)">/ɑu/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(19)">/ei/</li>
+                </ul>  
+              </div>
+            </div>
+          </div>  
+  
+          <div class="tab-pane fade" id="pills-consonants" role="tabpanel" aria-labelledby="pills-consonants-tab" tabindex="0">
+            <div class="ipa m-1 col-md-8 ms-4 row align-items-center">
+              <div class="voiceless-c col flex h5">
+                <small>Voiceless consonants: </small> <br>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(20)">/p/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(21)">/t/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(22)">/tʃ/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(23)">/k/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(24)">/f/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(25)">/θ/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(26)">/s/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(27)">/ʃ/</li>
+                </ul> 
+              </div>
+            </div>
+
+            <div class="ipa m-1 col-md-8 ms-4 row align-items-center">
+              <div class="voiced-c col flex h5">
+                <small>Voiced consonants: </small> <br>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(28)">/b/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(29)">/d/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(30)">/dʒ/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(31)">/g/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(32)">/v/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(33)">/ð/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(34)">/z/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(35)">/ʒ/</li>
+                </ul> 
+              </div>
+            </div>
+
+            <div class="ipa m-1 col-md-8 ms-4 row align-items-center">
+              <div class="other-c col flex h5">
+                <small>Other consonants: </small> <br>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(36)">/m/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(37)">/n/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(38)">/ŋ/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(39)">/h/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(40)">/l/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(41)">/r/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(42)">/w/</li>
+                  <li class="list-group-item bg-transparent border-0 text-white" onclick="textChange(43)">/j/</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="tab-pane fade" id="pills-practices" role="tabpanel" aria-labelledby="pills-practices-tab" tabindex="0">
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(44)" >
+              <div class="practice col-1 h3">01</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /ɪ/ - /i:/ - /eɪ/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(53)">
+              <div class="practice col-1 h3">02</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /e/ - /æ/ - /aɪ/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(58)">
+              <div class="practice col-1 h3">03</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /ɒ/ - /ɒ:/ - /aʊ/ 
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(64)">
+              <div class="practice col-1 h3">04</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /θ/ - /s/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(68)">
+              <div class="practice col-1 h3">05</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /ð/ - /z/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(71)">
+              <div class="practice col-1 h3">06</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /əʊl/ - /ɒ:l/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(76)">
+              <div class="practice col-1 h3">07</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /ʒ/ - /r/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" id="playArea" onclick="textChange(80)">
+              <div class="practice col-1 h3">08</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /l/ - /əʊ/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(83)">
+              <div class="practice col-1 h3">09</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /m/ - /n/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(87)">
+              <div class="practice col-1 h3">10</div>
+              <div class="compare m-2 col flex h5">
+                <small>Compare: </small> <br>
+                /w/ - /v/
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(93)">
+              <div class="practice col-1 h3">11</div>
+              <div class="practice m-2 col flex h5">
+                <small>Practice: </small> <br>
+                consonant blends
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+            <a href="#playArea" class="ipa2 m-1 col-md-5 ms-4 row align-items-center" onclick="textChange(95)">
+              <div class="practice col-1 h3">12</div>
+              <div class="tips m-2 col flex h5">
+                <small>Tips: </small> <br>
+                silent letters
+              </div>
+              <div class="compare-play col-2"><i class="bi bi-play"></i></div>
+            </a>
+
+          </div>
+
+          <!--start of quizzes -->
+
+          <div class="tab-pane fade" id="pills-quizzes" role="tabpanel" aria-labelledby="pills-quizzes-tab" tabindex="0">
+            <div class="ipa m-1 col-md-5 ms-4" style="height: 350px;">
+              <div class="quiz-score h6">
+                <span class="score">Score:</span>
+                <span id="score"> 0</span>
+              </div>
+              <div class="quiz-no h6">
+                <span class="quizNo">Quiz number:</span>
+                <span id="quizNo"> 1/10</span>
+              </div>
+
+              
+            
+              <!-- <div class="quiz p-2 h4 text-center" id="quiz">quiz</div> -->
+              <div class="text-center m-3">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary" for="btnradio1" id="radioBtn1">Radio 1</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio2" id="radioBtn2">Radio 2</label>
+                
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio3" id="radioBtn3">Radio 3</label>
+                </div>
+              </div>
+              <div style="position: relative;">
+                <img src="images/headphone2.png" class="mx-auto d-block" alt="Responsive image" style="width: 130px; height: 130px; object-fit: cover;">
+                <div id="quizPlayBtn">
+                  <i class="bi bi-play-circle" style="left: 40%; top: 40%; position:absolute;"></i>
+                </div>
+              </div>
+              <div class="text-center m-2">
+                <button type="button" class="btn btn-primary" id="checkBtn">Check</button><br><br>
+                <span class="label label-default" id="answer">Listen & choose right answer.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--end of ipa tabs-->
+
+      <!--start of player -->
+      <section class="p-4 row bg-dark align-items-center">
+        <div class="col-md-2" style="width: 200px;">
+          <img src="" class="img-fluid" id="songPics" alt="songPics/12.png" style="width: 130px; height: 130px; object-fit: cover;">
+        </div>
+
+        <div class="buttons m-2 col-md-4">
+          <div class="text-center h7">
+            <button type="button" class="btn btn-primary" id="prevBtn">&#10094</button>
+            <button type="button" class="btn btn-primary" id="playBtn">Play</button>
+            <button type="button" class="btn btn-primary" id="stopBtn">Stop</button>
+            <button type="button" class="btn btn-primary" id="nextBtn">&#10095</button>
+          </div>
+
+          <label for="customRange2" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="100" value="0" id="customRange2">
+
+          <!-- <div class="text-center m-3 h3">
+            <audio id="recorder" muted hidden></audio>
+            <div>
+                <button type="button" class="btn btn-primary" id="recordBtn">Record</button>
+                <button type="button" class="btn btn-primary" id="stopRecordBtn">Stop Recording</button>
+            </div>
+            <audio class="pt-2" id="recordPlayer" controls></audio>
+          </div> -->
+        </div>
+
+        <div class="col-md-5">
+          <div class="sound text-white" id="description">description</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="p-3 mb-2 bg-secondary text-white">
+        <div class="row">
+            <div class="col-md-6">
+              <a href="https://www.smashwords.com/books/view/1167357"><img src="images/cover.png"  style="width: 50%;"></a>
+            </div>
+            <div class="col-md-3 text-center">
+              <br><br><br><br>
+              <a class="h3" href="https://www.smashwords.com/books/view/1167357" >突破英语发音</a>
+              <br><br>
+              <h5>(对比练习法)</h5><br>
+            </div>
+        </div>      
+
+        <div class="m-5">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一些中国学生到讲英语的国家留学，虽然通过了入学英语考试，但到了这些国家，发现自己讲的英语当地人听不懂，当地人讲的英语自己也听不懂，还可能因此引发误会。甚至一些人学习英语一、二十年，英语发音仍然不正确，音标发音混淆……。除了英语口音不同，英语口语、书写用语不同，英语习惯用语不同等原因，一个基本问题就是英语音标、单词发音不正确。</p><br>
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语学习的难点是发音，英语发音关键是控制口型、发音长度。大脑需反复练习、控制一系列复杂的口腔等部位的肌肉动作，进行发音。如果基本发音错误，学的英语词汇越多，时间越长，将来逐个纠正的难度就越大。</p><br>
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文通过分析汉语、英语的不同特点，针对中国学生在英语发音中容易犯的错误，找出一种有针对性、行之有效的英语发音练习方法，突破英语发音。</p><br>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="mailto:inquiry@ldautoparts.com.cn" target="_blank" class="btn btn-primary" >
+          <span>您的意见和建议非常宝贵，欢迎联系。</span>
+          <span class="email">Contact us:</span> &nbsp;&nbsp;
+          <img src="images/email.png" style="width: 30px;">
+        </a> 
+
+      </div>
+
+    </footer>
+   </body>
+   
+   <script>
+    msieversion();
+    function msieversion() {
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf("MSIE ");
+
+      if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+      {
+        alert("提示: 你正在使用IE浏览器, 因Bootstrap V5.0不再支持该版本浏览器, 可能导致浏览异常。 请使用Edge、Chrome(谷歌)、Firefox(火狐)、QQ、搜狐、360等浏览器浏览我们网站。");
+      }
+      // else  // If another browser, return 0
+      // {
+      //   alert('otherbrowser');
+      // }
+      return false;
+    }
+  </script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/study.js"></script>
+  <!-- <script type="text/javascript" src="js/recorder.js"></script> -->
+</html>
