@@ -1,0 +1,108 @@
+body{
+	/* font-family: "Times New Roman", Times, serif;	 */
+	background-color: #083353;
+	min-width: 350px;
+}
+
+body a{
+	text-decoration: none;
+}
+
+#title{
+	text-shadow: 0px 3px 3px blue, 0px 3px 3px white;
+}
+
+
+.mainnav .active{
+	color: red!important;
+}
+
+.dropdown-menu a.active{
+	color: white!important;
+	background: red;
+}
+
+.navbar-nav a.language{
+	background: red!important;
+}
+
+.mainnav .active::after{
+
+	content: '';
+	background-color: red;
+	height:2px;
+	display: block;
+	margin-top: 5px;
+}
+
+.study-nav .active{
+	color: red!important;
+	background-color: transparent!important;
+}
+
+.study-nav .active::after{
+	content: '';
+	background-color: red;
+	height:2px;
+	display: block;
+	margin-top: 5px;
+}
+
+.study-area{
+	background-image: url('../images/hk2.jpg');
+	min-height: 350px;
+	/* background-position: 20% 10%; */
+	background-image: cover;
+	background-size: 100%;
+}
+
+.ipa,.ipa2{
+	background-color: #69757d;
+	background: linear-gradient(90deg, rgba(0,0,4,1) 0%, rgba(24,49,82,1) 15%, rgba(25,51,83,1) 67%, rgba(0,212,255,0) 100%);
+	transition: all 0.3s ease;
+}
+
+.ipa li:hover{
+	cursor: pointer;
+	transform: translateY(-4px);
+}
+
+.ipa2:hover{
+	border: solid thin lightgrey;
+	cursor: pointer;
+	transform: translateY(-4px);
+}
+
+#quizPlayBtn{
+	position: absolute;
+	font-size: 2em;
+	background-color: #000000bb;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	width: 4.04em;
+	height: 4.05em;
+	opacity: 0;
+}
+
+#quizPlayBtn:hover{
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+	html {
+	  transform: rotate(-90deg);
+	  transform-origin: left top;
+	  width: 100vh;
+	  height: 100vw;
+	  overflow-x: hidden;
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	}
+  }
+
+
+

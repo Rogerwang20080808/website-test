@@ -1,0 +1,25 @@
+  #title{
+    text-shadow: 0px 3px 3px blue, 0px 3px 3px white;
+  }  
+  
+  .mainnav .active{
+    color: red!important;
+  }
+  
+  .dropdown-menu a.active{
+    color: white!important;
+    background: red;
+  }
+  
+  .navbar-nav a.language{
+    background: red!important;
+  }
+  
+  .mainnav .active::after{
+    content: '';
+    background-color: red;
+    height:2px;
+    display: block;
+    margin-top: 5px;
+  }
+  
